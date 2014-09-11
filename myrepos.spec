@@ -1,20 +1,20 @@
 Name: myrepos
 Version: 1.20140831.1
-Release: alt1
+Release: alt2
 
 Summary: A tool to manage all your version control repos
-License: GPL-2+
+License: GPLv2+
 Group: Development/Tools
+
 Url: http://myrepos.branchable.com/
+Source: %name-%version.tar
+Patch: %name-%version-%release.patch
 Packager: Pavel Nakonechny <pavel.nakonechny@skitlab.ru>
 
 Provides: mr
 
-Source: %name-%version.tar
-Patch: %name-%version-%release.patch
-
 BuildArch: noarch
-BuildRequires: perl-podlators
+BuildRequires: perl-podlators perl-libwww
 
 %description
 The mr(1) command can checkout, update, or perform other actions on
@@ -35,9 +35,6 @@ of things it can do include:
  * Remember actions that failed due to a laptop being offline, so they
    can be retried when it comes back online.
 
-# webcheckout script needs perl(LWP/Simple.pm),
-# there is no such module in Alt Linux currently, so comment out it..
-%if 0
 %package -n myrepos-webcheckout
 Summary: Check out repositories referenced on a web page
 Group: Development/Tools
@@ -57,29 +54,30 @@ If the optional destdir parameter is specified, VCS programs will be asked
 to check out repositories into that directory. If there are multiple
 repositories to check out, each will be checked out into a separate
 subdirectory of the destdir.
-%endif
 
 %prep
-%setup -q
+%setup
 %patch -p1
 
 %build
 %make_build
 
 %install
-%make DESTDIR=%buildroot install
+%makeinstall_std
 
 %files
 %_bindir/mr
 %_man1dir/mr*
 %_datadir/mr
 
-%if 0
 %files -n myrepos-webcheckout
 %_bindir/webcheckout
 %_man1dir/webcheckout*
-%endif
 
 %changelog
-* Fri Sep 11 2014 Pavel Nakonechny <pavel.nakonechny@skitlab.ru> 1.20140831.1-alt1
+* Fri Sep 12 2014 Michael Shigorin <mike@altlinux.org> 1.20140831.1-alt2
+- enabled webcheckout subpackage (thx Alexey Borisenkov)
+- minor spec cleanup
+
+* Fri Sep 12 2014 Pavel Nakonechny <pavel.nakonechny@skitlab.ru> 1.20140831.1-alt1
 - initial build, based on 1.20140831.1 (2a044e2)
