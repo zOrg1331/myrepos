@@ -1,0 +1,23 @@
+object 2a044e2dcc3efcaa6ba8f0d7b6f8bc68f13ee3a3
+type commit
+tag 1.20140831.1
+tagger Joey Hess <joey@kitenet.net> 1409519176 -0700
+
+tagging package myrepos version 1.20140831.1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIVAwUAVAOOSMkQ2SIlEuPHAQL4zxAAgRDwMD7UMR8l/S2CRnP0LyAN+gyjNUo+
++V0GW7UtzyCiN7gTkj+ZtOl/6CbVa1LzoUO3PV4yKdGtlHhw77Pa/CTk7cVpKdHK
+uCmyXzWCn39Drq+0qSLwwMOzz8yIPmyccBqSkctfNIShSIWZBnst/VGBHxTb7YQC
+STfjw/oEJijIP45VtMhnweVyk4Uvxq/4w8emQvBMDkkKFeEHRE23ldJ7EGP1c21g
+PzCprWrQ4JBLp53DQ8QqnkJyA4AqOYD5khhYmalPGfZTbazggbY7vQHgNL7LVIFO
+NxqEKBLH/WObtD5dO5SEc6iWh1qDFmF5hcLSSTUYIbe9d2VgutgYUoT5VE3FzuV/
+8QTWTi31XwhHb5UUkzzM6jvTaNtel31r6AvVsoOaynrp3jTtM6Gs0ncp9pJfa+hy
+YlEKLQXOXJ2nvwzeg39jZnLtPwCM3af8lPOGSPmtAZdHh6PvbW9sG9K0C0SvMUsD
+6E0YLWt4PsRhiD2I/nm+mxMuE+A+Gl7pTY0Dd/qzp1lpzaywCQk1FiOVwvo80CQm
+Ft/GWACecaXxWAWcyUASBY8+IRlXtvecQn9oQXKrB+n09inojuSQXbXIXrNbtsx7
+f4/UofSlEQvdi/N2eRruLFtBE4rmsQ9aQxPp2D8mb3hHQRw7byf/7Jfu8fLSYzMu
+QDjQLhZnzpU=
+=nUvD
+-----END PGP SIGNATURE-----
