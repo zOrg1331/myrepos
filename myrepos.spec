@@ -1,6 +1,6 @@
 Name: myrepos
-Version: 1.20140831.1
-Release: alt2
+Version: 1.20140831.2
+Release: alt1
 
 Summary: A tool to manage all your version control repos
 License: GPLv2+
@@ -75,6 +75,12 @@ subdirectory of the destdir.
 %_man1dir/webcheckout*
 
 %changelog
+* Fri Sep 19 2014 Pavel Nakonechny <pavel.nakonechny@skitlab.ru> 1.20140831.2-alt1
+- update to 1.20140831.2
+- mr: create temporary file with '.mrconfig' suffix
+- mr: fix 'bootstrap' action
+- mr: fix config parsing when '-c' and '-d' options are used
+
 * Fri Sep 12 2014 Michael Shigorin <mike@altlinux.org> 1.20140831.1-alt2
 - enabled webcheckout subpackage (thx Alexey Borisenkov)
 - minor spec cleanup
