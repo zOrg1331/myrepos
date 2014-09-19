@@ -1782,27 +1782,9 @@ sub bootstrap {
 	}
 	chdir($dir) || die "chdir $dir: $!";
 
-	# Special case to handle checkout of the "." repo, which 
-	# would normally be skipped.
 	my $topdir=abs_path(".")."/";
-	my @repo=($topdir, $topdir, ".");
-	loadconfig($tmpconfig, $topdir, $src);
-	record(\@repo, action("checkout", @repo, 1))
-		if exists $config{$topdir}{"."}{"checkout"};
-
-	if (-e ".mrconfig") {
-		print STDERR "mr bootstrap: .mrconfig file already exists, not overwriting with $src\n";
-	}
-	else {
-		move($tmpconfig, ".mrconfig") || die "rename: $!";
-	}
-
-	# Reload the config file (in case we got a different version)
-	# and checkout everything else.
-	startingconfig();
-	loadconfig(".mrconfig");
+	loadconfig($tmpconfig, $topdir);
 	dispatch("checkout");
-	@skipped=grep { abs_path($_) ne abs_path($topdir) } @skipped;
 	showstats("bootstrap");
 	exitstats();
 }
