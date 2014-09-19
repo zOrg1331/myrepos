@@ -1894,7 +1894,11 @@ sub main {
 
 	startingconfig();
 	loadconfig($HOME_MR_CONFIG);
-	loadconfig($ENV{MR_CONFIG});
+	if ($directory) {
+		loadconfig($ENV{MR_CONFIG}, $directory);
+	} else {
+		loadconfig($ENV{MR_CONFIG});
+	}
 	#use Data::Dumper; print Dumper(\%config);
 	
 	my $action=expandaction(shift @ARGV);
